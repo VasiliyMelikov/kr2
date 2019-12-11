@@ -1,0 +1,10 @@
+<div class="all">
+  <input [(ngModel)]=text style="color:rgb(255, 0, 0)">
+  <p style="border: 2px solid greenyellow; width: max-content;">{{text}}</p>
+  <input type='checkbox' id="first" *ngIf="!chcbox" [(ngModel)]=chcbox routerLink='binding'>
+  <input type='checkbox' id='second' *ngIf="chcbox" [(ngModel)]=chcboxe routerLink='' (click)="scnd()">
+</div>
+  <div *ngIf="chcbox">
+    <app-input [text]=text></app-input>
+  </div>
+
